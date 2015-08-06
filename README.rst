@@ -10,3 +10,9 @@ Usage:
 No options are given. The script assumes it is running in an EC2 instance, and
 will grab the current instance id from the instance metadata and AWS
 credentials from the current environment.
+
+Changelog:
+
+0.2.0 - Handle case where a "completed" scheduled event still shows up in API
+
+0.1.1 - Initial public release

@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='check_no_scheduled_ec2_events',
-    version='0.1.1',
+    version='0.2.0',
     packages=['check_no_scheduled_ec2_events', ],
     license='Creative Commons Attribution-Noncommercial-Share Alike license',
     description='Nagios-style check if the current EC2 instance has any scheduled events',
