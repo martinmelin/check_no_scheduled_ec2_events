@@ -36,7 +36,7 @@ def check():
     # Get instance status for the EC2 instance we are running on:
     instance_status = connection.get_all_instance_status(instance_ids=[instance_id]).pop()
 
-    # Filter out schedueld events that already have been completed
+    # Filter out scheduled events that already have been completed
     scheduled_events = filter(lambda e: '[Completed]' not in e.description, instance_status.events)
     if scheduled_events:
         print "CRITICAL: instance %s has scheduled events: %s" % (instance_id, scheduled_events)
