@@ -37,7 +37,8 @@ def check():
     instance_status = connection.get_all_instance_status(instance_ids=[instance_id]).pop()
 
     # Filter out scheduled events that already have been completed
-    scheduled_events = filter(lambda e: '[Completed]' not in e.description, instance_status.events)
+    events = instance_status.events if instance_status.events is not None else []
+    scheduled_events = filter(lambda e: '[Completed]' not in e.description, events)
     if scheduled_events:
         print "CRITICAL: instance %s has scheduled events: %s" % (instance_id, scheduled_events)
         sys.exit(2)
