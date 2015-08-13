@@ -13,6 +13,8 @@ credentials from the current environment.
 
 Changelog:
 
+0.2.1 - Handle `events` being None in boto `InstanceStatus`
+
 0.2.0 - Handle case where a "completed" scheduled event still shows up in API
 
 0.1.1 - Initial public release
